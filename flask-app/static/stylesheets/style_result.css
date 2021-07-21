@@ -1,0 +1,25 @@
+.uploader{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+#input_img_box{
+    color: white;
+    margin-top: -100px;
+    position: relative;
+    margin-right: 20px;
+    margin-left: -180px;
+}
+
+#result_txt{
+    margin-top: -150px;
+    padding-left: 320px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

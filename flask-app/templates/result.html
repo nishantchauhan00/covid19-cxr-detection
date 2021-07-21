@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Project</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/style_result.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='college.png') }}">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header_image">
+            <img class="header_img img-thumbnail rounded float-start"
+                src="{{ url_for('static',filename='college.png') }}" />
+        </div>
+        <div class="header_text" onclick="window.location.href = '/';">
+            COVID&nbsp;CXR&nbsp;Detector
+        </div>
+    </header>
+
+
+    <!-- MAIN BODY -->
+    <div class="uploader">
+        <div id="input_img_box">
+            <img id="input_img" src="{{ user_image }}" alt="img"/>
+        </div>
+        
+        <div id="result_txt">
+            {{result1}}    
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer id="sticky-footer" class="footer nb-footer py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>This flask web app is part of Major Project.<sup>&copy;</sup></small>
+        </div>
+    </footer>
+
+    
+
+    <script>
+        var header = document.getElementsByClassName('header');
+        var uploader = document.getElementsByClassName('uploader');
+        var footer = document.getElementsByClassName('footer');
+
+        uploader[0].style.height = (screen.availHeight - header[0].clientHeight - footer[0].clientHeight) + "px";
+        
+        var outputbox = document.getElementById('input_img_box');
+        var output = document.getElementById('input_img');
+        outputbox.style.opacity = 1;
+        outputbox.style.zIndex = 1;
+        output.style.opacity = 1;
+    </script>
+
+</body>
+
+</html>
