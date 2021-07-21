@@ -17,3 +17,6 @@ pip install tensorflow
 python index.py
 # note: ngrok will take some time to setup
 ```
+
+## Model
+Model is not present in project. [Download it from here.](https://jmp.sh/de5XOVz) Save it in models folder with name 'densenet-best.hdf5'.
